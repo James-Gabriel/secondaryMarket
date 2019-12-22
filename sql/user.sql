@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS user;
+CREATE TABLE user(
+    id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name CHAR(20) UNIQUE NOT NULL,
+    password CHAR(20) NOT NULL,
+    birthday DATE NOT NULL,
+    gender CHAR(10) NOT NULL,
+    email CHAR(30) NOT NULL,
+    phone CHAR(20) NOT NULL,
+    isadmin INTEGER NOT NULL
+);

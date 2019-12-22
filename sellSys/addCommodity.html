@@ -1,0 +1,26 @@
+<html>
+    <body>
+	<form action="addCommodity.php" method="POST">
+            class:<br>
+            <input type="radio" name="class" value="cloth" checked>cloth<br>
+            <input type="radio" name="class" value="food">food<br>
+            <input type="radio" name="class" value="toy">toy<br>
+            <input type="radio" name="class" value="other">other<br><br>
+
+            name:<br>
+            <input type="text" name="name"><br><br>
+
+            descrip:<br>
+            <textarea rows="3" cols="20" name="descrip"></textarea><br><br>
+
+            price:<br>
+            <input type="number" name="price" min="0.00" max="100000.00" step="0.01"><br><br>
+
+	    <input type="submit" value="Submit"><br><br>
+	    <input type="reset" value="Clear Form">
+        </form>
+
+        <br><a href="sell.php">Sell Page</a><br>
+
+    </body>
+</html>
