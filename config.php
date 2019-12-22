@@ -1,7 +1,7 @@
 <?php
 return array(
             'dbuser' => 'yjm',
-            'dbpassword' => 'Aa13115681225',
+            'dbpassword' => 'xxxxxx',
             'dbname'  => 'shop',
 );
 ?>
