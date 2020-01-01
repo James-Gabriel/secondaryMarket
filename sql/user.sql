@@ -7,5 +7,6 @@ CREATE TABLE user(
     gender CHAR(10) NOT NULL,
     email CHAR(30) NOT NULL,
     phone CHAR(20) NOT NULL,
+    isseller INTEGER NOT NULL,
     isadmin INTEGER NOT NULL
 );

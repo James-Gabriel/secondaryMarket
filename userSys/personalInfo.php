@@ -5,7 +5,7 @@ $dbuser = $config['dbuser'];
 $dbpassword = $config['dbpassword'];
 $dbname = $config['dbname'];
 
-$con = new mysqli("127.0.0.1", $dbuser, $dbpassword, $dbname);
+$con = new mysqli("localhost", $dbuser, $dbpassword, $dbname);
 
 if(!$con){
         print "can't connect to mysql server\n";
@@ -49,6 +49,11 @@ while($row = $result->fetch_assoc()){
 
     print '<input type="submit" value="Submit"><br><br>';
     print '<input type="reset" value="Clear Form">';
+    
+    if($row[isadmin]==='1'){
+    	print '<br><a href="../adminSys/listUsers.php">List Users</a>';
+    }
+    
 }
 print '</form>';
 

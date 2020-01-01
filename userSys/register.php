@@ -5,9 +5,9 @@ $dbuser = $config['dbuser'];
 $dbpassword = $config['dbpassword'];
 $dbname = $config['dbname'];
 
-$con = new mysqli("127.0.0.1", $dbuser, $dbpassword, $dbname);
+$con = new mysqli("localhost", $dbuser, $dbpassword, $dbname);
 
-if(!$con){
+if($con->connect_errno){
         print "can't connect to mysql server\n";
         exit;
 }
@@ -19,7 +19,7 @@ $gender =  $_POST["gender"];
 $email = $_POST["email"];
 $phone = $_POST["phone"];
 
-$sql = "insert into user(name, password, birthday, gender, email, phone, isadmin) values('$name','$password','$birthday','$gender', '$email', '$phone', '0')";
+$sql = "insert into user(name, password, birthday, gender, email, phone, isseller, isadmin) values('$name','$password','$birthday','$gender', '$email', '$phone', '0', '0')";
 
 if ($con->query($sql) === TRUE){
         print "insert sucessfully";

@@ -5,7 +5,7 @@ $dbuser = $config['dbuser'];
 $dbpassword = $config['dbpassword'];
 $dbname = $config['dbname'];
 
-$con = new mysqli("127.0.0.1", $dbuser, $dbpassword, $dbname);
+$con = new mysqli("localhost", $dbuser, $dbpassword, $dbname);
 
 if(!$con){
         print "can't connect to mysql server\n";
@@ -33,5 +33,6 @@ if($cnt == 1){
 
 $con->close();
 
+print '<br><a href="../userSys/panel.php">User Panel</a>';
 print '<br><a href="../index.php">Main Page</a>';
 ?>
